@@ -234,14 +234,21 @@ body {
 .js .js-accordion dd {
   display: none;
 }
-
+.js-accordion dt {
+  cursor: pointer;
+}
 .js-accordion dt::after {
-  content: '⬎';
-  margin-left: 10px;
+  content: '›';
+  margin-left: 0.500rem;
+  transition-duration: .5s;
 }
 
 .js-accordion dt.ativo::after {
-  content: '⬏';
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .js-accordion dd.ativo {
